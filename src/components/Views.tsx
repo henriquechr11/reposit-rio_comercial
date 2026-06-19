@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import euPhoto from '../assets/eu.jpeg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,6 +52,7 @@ export function HomeView({ isActive, isVisible }: ViewProps) {
 
   return (
     <div ref={containerRef} className={`view-container ${isActive ? 'active' : ''} ${isVisible ? 'visible' : ''}`} id="view-home">
+      <img src={euPhoto} alt="Henrique Santos" className="bio-photo" />
       <p className="bio-text">
         <span>Desenvolvedor Full Stack</span>
         <span className="dim">em formação pela</span>
@@ -145,7 +147,7 @@ export function FAQView({ isActive, isVisible }: ViewProps) {
 
   const faqs = [
     { question: 'Qual é o seu processo de trabalho?', answer: 'Começo com pesquisa e imersão no contexto do projeto, seguido de wireframes e prototipagem em alta fidelidade. Depois, desenvolvo o front-end com foco em performance e detalhes visuais.' },
-    { question: 'Que tecnologias você utiliza?', answer: 'TypeScript, React, Next.js, e ferramentas de design como Figma. Também trabalho com MySQL, PostgreSQL, Supabase, C#, Python, Kotlin, Swift, Flutter, N8N, Git, HTML, CSS, Tailwind CSS, JavaScript e APIs RESTful.' },
+    { question: 'Que tecnologias você utiliza?', answer: 'MySQL, C#, N8N, Kotlin, Swift, Flutter, React, TypeScript, Python, Git, HTML, CSS, Tailwind CSS, JavaScript, APIs, Supabase, PostgreSQL, Figma e Stitch.' },
     { question: 'Você trabalha com projetos freelance?', answer: 'Sim, estou aberto a projetos freelance selecionados. Prefiro colaborações de médio a longo prazo onde posso contribuir tanto no design quanto no desenvolvimento.' },
     { question: 'Qual o prazo médio de um projeto?', answer: 'Depende da complexidade, mas geralmente entre 4 e 12 semanas. Projetos com identidade visual e desenvolvimento completo tendem a levar mais tempo.' },
   ];

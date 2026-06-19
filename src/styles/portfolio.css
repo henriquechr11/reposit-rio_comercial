@@ -250,6 +250,16 @@ a {
   align-self: flex-end;
 }
 
+#view-home .bio-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+  filter: grayscale(100%);
+}
+
 #view-home .bio-text {
   font-size: 13px;
   font-weight: 700;
